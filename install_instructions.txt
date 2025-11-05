@@ -1,0 +1,17 @@
+Инструкция по установке:
+
+1. Сохраните скрипт в /usr/local/bin/monitor_test.sh
+
+2. Сделайте скрипт исполняемым:
+chmod +x /usr/local/bin/monitor_test.sh
+
+3. Создайте лог-файл и настройте права:
+touch /var/log/monitoring.log
+chmod 644 /var/log/monitoring.log
+
+4. Разместите юниты systemd в /etc/systemd/system/
+
+5. Включите и запустите таймер:
+systemctl daemon-reload
+systemctl enable monitoring_test.timer
+systemctl start monitoring_test.timer
