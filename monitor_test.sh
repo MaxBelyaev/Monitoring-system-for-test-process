@@ -3,7 +3,7 @@
 PROCESS_NAME="test"
 MONITORING_URL="https://test.com/monitoring/test/api"
 LOG_FILE="/var/log/monitoring.log"
-PID_FILE="/var/run/monitoring_test.pid"
+PID_FILE="/run/monitoring_test/monitoring_test.pid"
 
 log_message() {
     echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"

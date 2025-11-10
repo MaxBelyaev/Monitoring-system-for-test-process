@@ -4,5 +4,6 @@ After=network.target
 
 [Service]
 Type=oneshot
+User=monitoring
+RuntimeDirectory=monitoring_test
 ExecStart=/usr/local/bin/monitor_test.sh
-User=root

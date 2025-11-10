@@ -2,12 +2,14 @@
 
 1. Сохраните скрипт в /usr/local/bin/monitor_test.sh
 
-2. Сделайте скрипт исполняемым:
-chmod +x /usr/local/bin/monitor_test.sh
+2. Создайте полдьзователя, лог-файл и настройте права:
+sudo usseradd -r -s /bin/false -d /var/lib/monitoring monitoring
+sudo touch /var/log/monitoring.log
+sudo chown monitoring:monitoring /var/log/monitoring.log
+sudo chmod 644 /var/log/monitoring.log
 
-3. Создайте лог-файл и настройте права:
-touch /var/log/monitoring.log
-chmod 644 /var/log/monitoring.log
+3. Сделайте скрипт исполняемым:
+chmod +x /usr/local/bin/monitor_test.sh
 
 4. Разместите юниты systemd в /etc/systemd/system/
 
